@@ -28,7 +28,6 @@ data "aws_availability_zones" "azs" {}
 
 module "vpc" {
 	source = "terraform-aws-modules/vpc/aws"
-	version = "2.33.0"
 
 	name = "dev-vpc"
 	cidr = var.vpc_cidr_range
