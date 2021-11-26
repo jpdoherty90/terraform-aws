@@ -32,7 +32,7 @@ module "vpc" {
 	name = "dev-vpc"
 	cidr = var.vpc_cidr_range
 
-	azs = slice(data.aws_availability_zones.azs.name, 0, 2)
+	azs = ["eu-east-1a", "eu-east-1b", "eu-east-1c"]
 	public_subnets = var.public_subnets
 
 	database_subnets = var.database_subnets
